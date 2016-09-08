@@ -4,7 +4,7 @@ module ImageSearcher
 
     BASE_URI = "http://api.ababeen.com/api/images.php"
 
-    def get_json(url)
+    def self.get_json(url)
       response = HTTParty.get(url)
       JSON.parse(response.body)
     end
