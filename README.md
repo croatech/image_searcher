@@ -29,8 +29,8 @@ And you'll have a nested array with results. By default the array has `10` value
 **Available options**:
 ```
 query(String)
-count(Integer)
-preview(Boolean)
+count(Integer) - maximum 100
+preview(Boolean) 
 
 For example: `http://api.ababeen.com/api/images.php?q=America&preview=true&count=100`
 ```

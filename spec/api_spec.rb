@@ -10,4 +10,9 @@ describe "API specs" do
   it 'checks that hash inside an array is not empty' do
     expect(result).not_to be_empty
   end
+
+  it 'checks count option' do
+    fifty_results = ImageSearcher.search(query: 'Alyssa', count: 50)
+    expect(fifty_results.count).to eq(50)
+  end
 end
