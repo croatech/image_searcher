@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "API specs" do
+describe "Search" do
   let!(:result) { ImageSearcher.search(query: 'New York') }
 
   it 'checks that result is Array' do
@@ -27,13 +27,12 @@ describe "API specs" do
     expect(result_with_preview.count).to eq(10)
   end
 
-  it 'checks if query is empty' do
+  it 'checks for an empty array if the query is empty' do
     result_with_empty_query = ImageSearcher.search(query: '')
-    expect(result_with_empty_query).not_to be_empty
+    expect(result_with_empty_query).to be_empty
   end
 
-  it 'checks if query is missed' do
-    result_with_empty_query = ImageSearcher.search()
-    expect(result_with_empty_query).not_to be_empty
+  it 'checks for an exception if the query is missed' do
+     expect { ImageSearcher.search() }.to raise_error(RuntimeError, "Missing query")
   end
 end
