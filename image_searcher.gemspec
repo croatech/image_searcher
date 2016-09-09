@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "A ruby wrapper for the Ababeen images search API"
   spec.description   = "A ruby wrapper for the Ababeen images search API"
-  spec.homepage      = "http://"
+  spec.homepage      = "https://github.com/Frylock13/image_searcher"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
