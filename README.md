@@ -30,7 +30,7 @@ And you'll have a nested array with results. By default the array has `10` value
 ```
 query(String)
 count(Integer) - maximum 100
-preview(Boolean) 
+preview(Boolean) - false by default(full size)
 
 For example: `http://api.ababeen.com/api/images.php?q=America&preview=true&count=100`
 ```
