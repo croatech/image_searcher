@@ -7,7 +7,7 @@ A ruby wrapper for the [Ababeen](http://api.ababeen.com) Image Search API v1.0 -
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'image_searcher', '~> 0.1.2'
+gem 'image_searcher', '~> 0.1.3'
 ```
 
 And then execute:
@@ -30,9 +30,10 @@ And you've got an array of objects. By default the result has `10` nested arrays
 ```
 query(String)
 count(Integer) - maximum 100(10 by default)
-preview(Boolean) - show all images in preview(false by default)
 ```
-For example: `ImageSearcher.search(query: "New York", count: 66, preview: true)`
+For example: `ImageSearcher.search(query: "New York", count: 66)`
+
+Also you can see a nice preview of a result http://api.ababeen.com/api/images.php?q=tiger&preview=true&count=100
 
 ## Contributing
 

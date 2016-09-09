@@ -20,13 +20,6 @@ describe "Search" do
     expect(fifty_results.count).to eq(50)
   end
 
-  it 'checks that array is correct when preview sends' do
-    result_with_preview = ImageSearcher.search(query: 'Wonderland', preview: true)
-    expect(result_with_preview).to be_a(Array)
-    expect(result_with_preview).not_to be_empty
-    expect(result_with_preview.count).to eq(10)
-  end
-
   it 'checks for an empty array if the query is empty' do
     result_with_empty_query = ImageSearcher.search(query: '')
     expect(result_with_empty_query).to be_empty
