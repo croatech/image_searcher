@@ -26,4 +26,14 @@ describe "API specs" do
     expect(result_with_preview).not_to be_empty
     expect(result_with_preview.count).to eq(10)
   end
+
+  it 'checks if query is empty' do
+    result_with_empty_query = ImageSearcher.search(query: '')
+    expect(result_with_empty_query).not_to be_empty
+  end
+
+  it 'checks if query is missed' do
+    result_with_empty_query = ImageSearcher.search()
+    expect(result_with_empty_query).not_to be_empty
+  end
 end
