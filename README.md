@@ -1,13 +1,13 @@
 # Image Searcher
 
-A ruby wrapper for the [Ababeen](http://api.ababeen.com) Image Search API v1.0 - a modest analogue of deprecated Google Image Search API.
+A ruby wrapper for the [Ababeen](http://api.ababeen.com) Image Search API v1.0 - the modest alternative to deprecated Google Image Search API.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'image_searcher', '~> 0.1.1'
+gem 'image_searcher', '~> 0.1.2'
 ```
 
 And then execute:
@@ -21,10 +21,10 @@ Or install it yourself as:
 ## Usage
 
 ```
-@result = ImageSearcher.search(query: "New York")
+images = ImageSearcher.search(query: "New York")
 ```
 
-And you'll have a nested array with results. By default the result has `10` images. 
+And you've got a nested array with results. By default the result has `10` images. 
 
 **Available options**:
 ```
