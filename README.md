@@ -24,7 +24,7 @@ Or install it yourself as:
 images = ImageSearcher.search(query: "New York")
 ```
 
-And you've got a nested array with results. By default the result has `10` images. 
+And you've got an array of objects. By default the result has `10` nested arrays(objects). 
 
 **Available options**:
 ```
