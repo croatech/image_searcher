@@ -33,7 +33,8 @@ count(Integer) - maximum 100(10 by default)
 ```
 For example: `ImageSearcher.search(query: "New York", count: 66)`
 
-Also you can see a nice preview of a result http://api.ababeen.com/api/images.php?q=new%york&preview=true&count=100
+Also you can see a nice preview of a result: 
+http://api.ababeen.com/api/images.php?q=New%York&preview=true&count=100
 
 ## Contributing
 
