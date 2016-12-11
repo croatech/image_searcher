@@ -1,4 +1,8 @@
 module ImageSearcher
+
+  require_relative 'filter'
+  extend Filter
+
   def self.search(options = {})
     raise "Missing params" if options[:query].nil?
     raise "Missing query" if options[:query].empty?
@@ -7,6 +11,12 @@ module ImageSearcher
     url = "#{base_uri}?q=#{options[:query]}"
     url += "&count=#{options[:count]}" if options[:count]
 
-    ImageSearcher::API.get_json(url)
+    result = ImageSearcher::API.get_json(url)
+
+    if options[:format]
+      result = filter_by_format(result, options[:format])
+    end
+
+    result
   end
 end

@@ -1,18 +1,18 @@
 require 'spec_helper'
 
 describe "Search" do
-  let!(:result) { ImageSearcher.search(query: 'New York') }
+  let!(:results) { ImageSearcher.search(query: 'New York') }
 
   it 'checks that result is an array' do
-    expect(result).to be_a(Array)
+    expect(results).to be_a(Array)
   end
 
   it 'checks that array result is not empty' do
-    expect(result).not_to be_empty
+    expect(results).not_to be_empty
   end
 
   it 'checks that array result has 10 nested arrays by default' do
-    expect(result.count).to eq(10)
+    expect(results.count).to eq(10)
   end
 
   it 'checks count option' do
