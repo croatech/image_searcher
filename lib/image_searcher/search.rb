@@ -1,6 +1,7 @@
 module ImageSearcher
   def self.search(options = {})
-    raise "Missing query" unless options[:query]
+    raise "Missing params" if options[:query].nil?
+    raise "Missing query" if options[:query].empty?
 
     base_uri = ImageSearcher::API::BASE_URI
     url = "#{base_uri}?q=#{options[:query]}"

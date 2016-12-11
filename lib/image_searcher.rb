@@ -3,6 +3,4 @@ require 'httparty'
 require 'image_searcher/api'
 require 'image_searcher/search'
 
-module ImageSearcher
-  # Your code goes here...
-end
+module ImageSearcher; end
