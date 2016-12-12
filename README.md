@@ -30,8 +30,7 @@ And you've got an array of objects. By default the result has `100` nested array
 ```
 query(String)
 count(Integer) - maximum 100(100 by default)
-format(String) - if you need a certain format of images(jpg, png, etc.)
-formats(Array) - array of allow formats
+format(String) - if you need a certain format or formats of images(jpg, png, etc.)
 ```
 Examples:
 
@@ -39,7 +38,7 @@ Examples:
 
 `ImageSearcher::Client.new.search(query: 'New York', format: 'jpg')`
 
-`ImageSearcher::Client.new.search(query: 'New York', formats: ['jpg', 'png'])`
+`ImageSearcher::Client.new.search(query: 'New York', format: ['jpg', 'png'])`
 
 Also you can see a nice preview of a result: 
 http://api.ababeen.com/api/images.php?q=New%York&preview=true&count=100
