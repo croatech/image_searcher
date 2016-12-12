@@ -36,7 +36,9 @@ formats(Array) - array of allow formats
 Examples:
 
 `ImageSearcher::Client.new.search(query: 'New York', count: 66)`
+
 `ImageSearcher::Client.new.search(query: 'New York', format: 'jpg')`
+
 `ImageSearcher::Client.new.search(query: 'New York', formats: ['jpg', 'png'])`
 
 Also you can see a nice preview of a result: 
