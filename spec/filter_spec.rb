@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "Filter" do
-  let!(:results) { ImageSearcher.search(query: 'New York', format: 'jpg', count: 100) }
+  let!(:results) { ImageSearcher::Client.new.search(query: 'New York', format: 'jpg', count: 100) }
 
   it 'checks that the filter by format can delete some records' do
     expect(results.count).to_not eq(100)
@@ -20,14 +20,14 @@ describe "Filter" do
   end
 
   it 'checks that the filter allow right formats' do
-    results = ImageSearcher.search(query: 'Aleah', format: ['jpg', 'png'], count: 100)
+    results = ImageSearcher::Client.new.search(query: 'Aleah', format: ['jpg', 'png'], count: 100)
     results.each do |result|
       expect(result['url']).to match(/.jpg|.JPG|.png|.PNG/i)
     end
   end
 
   it 'checks that the filter doesn\'t allow wrong formats' do
-    results = ImageSearcher.search(query: 'Aleah', format: ['bmp', 'png'], count: 100)
+    results = ImageSearcher::Client.new.search(query: 'Aleah', format: ['bmp', 'png'], count: 100)
     results.each do |result|
       expect(result['url']).to match(/.jpg|.JPG|.png|.PNG/i)
     end
