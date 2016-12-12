@@ -11,8 +11,8 @@ describe "Search" do
     expect(results).not_to be_empty
   end
 
-  it 'checks that array result has 10 nested arrays by default' do
-    expect(results.count).to eq(10)
+  it 'checks that array result has 100 nested arrays by default' do
+    expect(results.count).to eq(100)
   end
 
   it 'checks count option' do

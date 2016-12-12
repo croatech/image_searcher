@@ -29,7 +29,7 @@ And you've got an array of objects. By default the result has `100` nested array
 **Available options**:
 ```
 query(String)
-count(Integer) - maximum 100(10 by default)
+count(Integer) - maximum 100(100 by default)
 format(String) - if you need a certain format of images(jpg, png, etc.)
 formats(Array) - array of allow formats
 ```

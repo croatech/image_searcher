@@ -11,6 +11,8 @@ module ImageSearcher
     result
   end
 
+  private
+
   def self.raise_errors(options)
     raise "Missing params" if options[:query].nil?
     raise "Missing query" if options[:query].empty?
