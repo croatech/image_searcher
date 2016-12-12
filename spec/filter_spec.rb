@@ -18,4 +18,18 @@ describe "Filter" do
       expect(result["url"]).to_not match(/.png/i)
     end
   end
+
+  it 'checks that the filter allow right formats' do
+    results = ImageSearcher.search(query: 'Aleah', formats: ['jpg', 'png'], count: 100)
+    results.each do |result|
+      expect(result['url']).to match(/.jpg|.JPG|.png|.PNG/i)
+    end
+  end
+
+  it 'checks that the filter doesn\'t allow wrong formats' do
+    results = ImageSearcher.search(query: 'Aleah', formats: ['bmp', 'png'], count: 100)
+    results.each do |result|
+      expect(result['url']).to match(/.jpg|.JPG|.png|.PNG/i)
+    end
+  end
 end
