@@ -7,7 +7,7 @@ module ImageSearcher
     raise_errors(options)
     url = build_json_url(options)
     result = ImageSearcher::API.get_json(url)
-    perform_filter_params(result, options)
+    result = filter_by_format(result, options) if options[:format]
     result
   end
 
@@ -25,13 +25,15 @@ module ImageSearcher
     url
   end
 
-  def self.perform_filter_params(result, options)
-    if options[:format]
-      result = filter_by_format(result, options[:format])
+  def self.filter_by_format(result, format)
+    if format.is_a?(Array)
+      format.each do |f|
+        filtered_json = result.keep_if { |h| h['url'].match(/.#{f}/i) }
+      end
+    else
+      filtered_json = result.keep_if { |h| h["url"].match(/.#{format}/i) }
     end
 
-    if options[:formats]
-      result = filter_by_formats(result, options[:formats])
-    end
+    filtered_json
   end
 end
