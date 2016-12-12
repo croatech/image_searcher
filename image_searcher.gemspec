@@ -5,7 +5,7 @@ require 'image_searcher/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "image_searcher"
-  spec.version       = ImageSearcher::VERSION
+  spec.version       = '0.1.4'
   spec.authors       = ["Vitaliy"]
   spec.email         = ["vitaliy.fry@gmail.com"]
 
@@ -29,6 +29,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec"
-  spec.add_dependency             "httparty"
+  spec.add_development_dependency "rspec", "~> 3.5.0"
+  spec.add_dependency             "httparty", "~> 0.14.0"
 end
