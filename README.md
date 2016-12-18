@@ -41,7 +41,7 @@ Examples:
 `ImageSearcher::Client.new.search(query: 'New York', format: ['jpg', 'png'])`
 
 Also you can see a nice preview of a result: 
-http://api.ababeen.com/api/images.php?q=New%York&preview=true&count=100
+http://api.ababeen.com/api/images.php?q=New%York&preview=true
 
 ## Contributing
 
